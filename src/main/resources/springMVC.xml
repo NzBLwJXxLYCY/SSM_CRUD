@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--  声明组件扫描器 当DispatcherServlet读取SpringMVC配置文件的时候 就会去com.reje.Controller找那些带有@Controller注解的类，来生成@Controller对象(功能相当于Servlet，只是不需要像Servlet那样去一个个注册) -->
+
+    <context:component-scan base-package="com.reje.controller"/>
+
+    <!--  声明视图解析器
+          帮助我们处理视图的路径和扩展名，生成视图对象
+    -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!--前缀：表示视图所在的路径-->
+        <property name="prefix" value="/WEB-INF/view/"/>
+        <!--后缀：表示视图文件的扩展名-->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <mvc:default-servlet-handler/>
+
+    <mvc:annotation-driven/>
+</beans>

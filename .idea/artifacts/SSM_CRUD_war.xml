@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SSM_CRUD:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/SSM_CRUD_war</output-path>
+    <root id="archive" name="SSM_CRUD_war.war">
+      <element id="artifact" artifact-name="SSM_CRUD:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:5.4.1.Final" />
+          <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.3.0.Final" />
+          <element id="library" level="project" name="Maven: com.fasterxml:classmate:1.3.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
